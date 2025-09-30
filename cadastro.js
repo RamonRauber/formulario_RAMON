@@ -1,3 +1,4 @@
+const formCliente = document.getElementById("form-cliente")
 formCliente.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -30,9 +31,9 @@ function pegarDadosCliente(){
     cliente.cpf = document.getElementById("cpf").value
     cliente.email = document.getElementById("email").value
     cliente.telefone = document.getElementById("telefone").value
-    cliente.cep = document.getElementById("cep").value
+    cliente.cep = document.getElementById("cep").value.replace(/\D/g, '');
     cliente.rua = document.getElementById("rua").value
-    cliente.n_casa = document.getElementById("numero").value
+    cliente.n_casa = document.getElementById("n_casa").value
     cliente.bairro = document.getElementById("bairro").value
     cliente.cidade = document.getElementById("cidade").value
     cliente.uf = document.getElementById("uf").value
